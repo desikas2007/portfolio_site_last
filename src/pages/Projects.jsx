@@ -58,9 +58,9 @@ export default function Projects() {
   ];
 
   const certificates = [
-    { title: "Data Driven program",       issuer: "NoviTech R&D Private Limited", date: "Oct 2nd 2025",        img: cert1, link: "#" },
-    { title: "Masterclass in Full Stack", issuer: "NoviTech R&D Private Limited", date: "Aug 27th – Sept 30th 2025", img: cert2, link: "#" },
-    { title: "PowerBI Workshop",          issuer: "Office Master",                date: "Oct 25th 2025",         img: cert3, link: "#" },
+    { title: "Data Driven program",       issuer: "NoviTech R&D Private Limited", date: "Oct 2nd 2025",        img: cert1 },
+    { title: "Masterclass in Full Stack", issuer: "NoviTech R&D Private Limited", date: "Aug 27th – Sept 30th 2025", img: cert2},
+    { title: "PowerBI Workshop",          issuer: "Office Master",                date: "Oct 25th 2025",         img: cert3 },
   ];
 
   const techStack = [
@@ -115,22 +115,19 @@ export default function Projects() {
                   <p>{item.desc}</p>
                 )}
 
-                <div className="card-actions">
-                  {filter === "certificates" ? (
-                    <a href={item.link} target="_blank" rel="noreferrer" className="action-btn demo-btn full-width">
-                      View Certificate
-                    </a>
-                  ) : (
-                    <>
-                      <a href={item.repo} target="_blank" rel="noreferrer" className="action-btn repo-btn">
-                        Repository
-                      </a>
-                      <a href={item.demo} target="_blank" rel="noreferrer" className="action-btn demo-btn">
-                        Demo
-                      </a>
-                    </>
-                  )}
-                </div>
+              <div className="card-actions">
+  {filter !== "certificates" && (
+    <>
+      <a href={item.repo} target="_blank" rel="noreferrer" className="action-btn repo-btn">
+        Repository
+      </a>
+      <a href={item.demo} target="_blank" rel="noreferrer" className="action-btn demo-btn">
+        Demo
+      </a>
+    </>
+  )}
+</div>
+
               </div>
             </div>
           ))}
