@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import "../styles/Projects.css";
 
@@ -38,7 +40,7 @@ export default function Projects() {
       title: "Sakura Notes",
       desc: "Beautiful anime-themed note-taking app with cloud sync, stickers, and pastel themes.",
       img: "https://cdn.dribbble.com/userupload/15861996/file/original-dffe52a7ba5b3062923ef5ae2f995064.png?resize=400x0",
-      demo: "#",
+      demo: "#", // Coming Soon
       repo: "#"
     },
     {
@@ -58,93 +60,67 @@ export default function Projects() {
   ];
 
   const certificates = [
-    { title: "Data Driven program",       issuer: "NoviTech R&D Private Limited", date: "Oct 2nd 2025",        img: cert1 },
-    { title: "Masterclass in Full Stack", issuer: "NoviTech R&D Private Limited", date: "Aug 27th – Sept 30th 2025", img: cert2},
-    { title: "PowerBI Workshop",          issuer: "Office Master",                date: "Oct 25th 2025",         img: cert3 },
+    { title: "Data Driven program", issuer: "NoviTech R&D Private Limited", date: "Oct 2nd 2025", img: cert1 },
+    { title: "Masterclass in Full Stack", issuer: "NoviTech R&D Private Limited", date: "Aug 27th – Sept 30th 2025", img: cert2 },
+    { title: "PowerBI Workshop", issuer: "Office Master", date: "Oct 25th 2025", img: cert3 },
   ];
 
-  const techStack = [
-    { name: "HTML",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-    { name: "CSS",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    { name: "Tailwind",   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-    
-    { name: "Node.js",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "MongoDB",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-   
-   
-    
-  ];
+  const currentProjects = filter === "web" ? webProjects : filter === "mobile" ? mobileProjects : certificates;
 
   return (
-    <div className="projects-page">
+    <div className="projects-section-content">
       <h1 className="projects-title sketch-title">
-        {filter === "certificates" ? "MY CERTIFICATES" : 
-         filter === "tech" ? "TECH STACK" : 
-         "MY PROJECTS"}
+                                MY PROJECTS
       </h1>
 
       <div className="filter-buttons">
         <button className={`filter-btn ${filter === "web" ? "active" : ""}`} onClick={() => setFilter("web")}>
-          Projects
+          Web
+        </button>
+        <button className={`filter-btn ${filter === "mobile" ? "active" : ""}`} onClick={() => setFilter("mobile")}>
+          Mobile
         </button>
         <button className={`filter-btn ${filter === "certificates" ? "active" : ""}`} onClick={() => setFilter("certificates")}>
           Certificates
         </button>
-        <button className={`filter-btn ${filter === "tech" ? "active" : ""}`} onClick={() => setFilter("tech")}>
-          Tech Stack
-        </button>
       </div>
 
-      {/* PROJECTS & CERTIFICATES GRID */}
-      {(filter === "web" || filter === "certificates") && (
-        <div className="projects-grid">
-          {(filter === "web" ? webProjects : certificates).map((item, index) => (
-            <div className={`project-card ${filter === "certificates" ? "cert-card" : ""}`} key={index}>
-              <img src={item.img} alt={item.title} className="card-image" />
+      <div className="projects-grid">
+        {currentProjects.map((item, index) => (
+          <div className={`project-card ${filter === "certificates" ? "cert-card" : ""}`} key={index}>
+            <img src={item.img} alt={item.title} className="card-image" />
 
-              <div className="card-content">
-                <h3>{item.title}</h3>
-                {filter === "certificates" ? (
-                  <>
-                    <p className="cert-issuer">{item.issuer}</p>
-                    <p className="cert-date">{item.date}</p>
-                  </>
-                ) : (
-                  <p>{item.desc}</p>
-                )}
+            <div className="card-content">
+              <h3>{item.title}</h3>
+              {filter === "certificates" ? (
+                <>
+                  <p className="cert-issuer">{item.issuer}</p>
+                  <p className="cert-date">{item.date}</p>
+                </>
+              ) : (
+                <p>{item.desc}</p>
+              )}
 
               <div className="card-actions">
-  {filter !== "certificates" && (
-    <>
-      <a href={item.repo} target="_blank" rel="noreferrer" className="action-btn repo-btn">
-        Repository
-      </a>
-      <a href={item.demo} target="_blank" rel="noreferrer" className="action-btn demo-btn">
-        Demo
-      </a>
-    </>
-  )}
-</div>
-
+                {filter === "certificates" ? (
+                  <a href={item.img} target="_blank" rel="noreferrer" className="action-btn demo-btn full-width">
+                    View Certificate
+                  </a>
+                ) : (
+                  <>
+                    <a href={item.repo} target="_blank" rel="noreferrer" className="action-btn repo-btn">
+                      {item.repo === "#" ? "Coming Soon" : "Repository"}
+                    </a>
+                    <a href={item.demo} target="_blank" rel="noreferrer" className="action-btn demo-btn">
+                      {item.demo === "#" ? "Coming Soon" : "Demo"}
+                    </a>
+                  </>
+                )}
               </div>
             </div>
-          ))}
-        </div>
-      )}
-
-      {/* TECH STACK GRID */}
-      {filter === "tech" && (
-        <div className="tech-grid">
-          {techStack.map((tech, index) => (
-            <div className="tech-card" key={index}>
-              <img src={tech.icon} alt={tech.name} className="tech-icon" />
-              <p>{tech.name}</p>
-            </div>
-          ))}
-        </div>
-      )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

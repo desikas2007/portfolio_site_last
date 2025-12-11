@@ -1,0 +1,17 @@
+/* Full-screen iridescent magic – behind absolutely everything */
+.iridescence-container {
+  position: fixed !important;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;     /* Mouse still works on header buttons */
+  overflow: hidden;
+}
+
+.iridescence-container canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}

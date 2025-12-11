@@ -1,4 +1,4 @@
-// src/pages/About.jsx
+// src/About.jsx
 import React, { useEffect, useState } from "react";
 import "../styles/About.css";
 import aboutImg from "../assets/aboutimg.jpeg";
@@ -12,40 +12,38 @@ export default function About() {
   }, []);
 
   return (
-    <div className="about-page">
-      <div className="about-wrapper">
-        {/* Photo */}
-        <div className={`about-photo ${loaded ? "show" : ""}`}>
-          <img src={aboutImg} alt="Desika Sekar" />
-        </div>
+    <div className="about-wrapper">
+      {/* Photo */}
+      <div className={`about-photo ${loaded ? "show" : ""}`}>
+        <img src={aboutImg} alt="Desika Sekar" />
+      </div>
 
-        {/* Right Side */}
-        <div className="about-info">
-          <h1 className="about-title">About Me</h1>
+      {/* Right Side */}
+      <div className="about-info">
+        <h1 className="about-title">About Me</h1>
 
-          <p className={`about-desc ${loaded ? "show" : ""}`}>
-            Hello, I'm <strong>Desika Sekar</strong> passionate about building smart and scalable
-            web & mobile applications. I aim to transition into the IT industry by 2028 and
-            eventually move towards AI and data science.
-          </p>
+        <p className={`about-desc ${loaded ? "show" : ""}`}>
+          Hello, I'm <strong>Desika Sekar</strong> passionate about building smart and scalable
+          web & mobile applications. I aim to transition into the IT industry by 2028 and
+          eventually move towards AI and data science.
+        </p>
 
-          {/* 3 Stat Cards */}
-          <div className={`stats-container ${loaded ? "show" : ""}`}>
-            <div className="stat-item">
-              <div className="stat-icon code">Code</div>
-              <h2>3+</h2>
-              <p>Total Projects</p>
-            </div>
-            <div className="stat-item">
+        {/* 3 Stat Cards */}
+        <div className={`stats-container ${loaded ? "show" : ""}`}>
+          <div className="stat-item">
+            <div className="stat-icon code">Code</div>
+            <h2>3+</h2>
+            <p>Total Projects</p>
+          </div>
+          <div className="stat-item">
             <div className="stat-icon cert">Voucher</div>
-              <h2>3+</h2>
-              <p>Certificates</p>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon globe">Globe</div>
-              <h2>1+</h2>
-              <p>Years Learning</p>
-            </div>
+            <h2>3+</h2>
+            <p>Certificates</p>
+          </div>
+          <div className="stat-item">
+            <div className="stat-icon globe">Globe</div>
+            <h2>1+</h2>
+            <p>Years Learning</p>
           </div>
         </div>
       </div>

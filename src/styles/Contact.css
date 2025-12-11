@@ -1,15 +1,12 @@
 /* Contact.css - Final Perfect Version with Correct Alignment */
 
-.contact-page {
+.contact-section {
   width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  background: #111827;
+  background: transparent; /* Show iridescence */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 80px;
   overflow: hidden;
 }
 
@@ -31,9 +28,9 @@
 .contact-right h1 {
   font-size: 72px;
   font-weight: 900;
-  color: #00cfff;
+  color: #d1dcdf;
   margin-bottom: 32px;
-  text-shadow: 0 0 40px rgba(0, 207, 255, 0.7);
+  text-shadow: 0 0 40px rgba(240, 242, 243, 0.7);
   clip-path: inset(0 100% 0 0);
   opacity: 0;
   animation: sketchDrawText 1.8s ease-out forwards;
@@ -61,14 +58,14 @@
 .contact-email {
   font-size: 26px;
   font-weight: 700;
-  color: #00cfff;
+  color: #e6f5f8;
   padding: 20px 64px;                    /* Slightly wider, premium feel */
-  background: rgba(0, 207, 255, 0.15);
+  background: rgba(44, 117, 117, 0.15);
   border-radius: 50px;
   display: inline-block;
   margin: 20px 0 80px 0;                 /* Top space above & big gap below */
   transition: all 0.4s ease;
-  box-shadow: 0 12px 40px rgba(0, 207, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(245, 242, 242, 0.3);
   
   opacity: 0;
   transform: translateY(30px);
@@ -77,10 +74,10 @@
 }
 
 .contact-email:hover {
-  background: #00cfff;
-  color: #111827;
+  background: #b5cbd6;
+  color: #f8f9fd;
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 207, 255, 0.7);
+  box-shadow: 0 20px 60px rgba(225, 227, 228, 0.7);
 }
 
 /* ===== 4. Social Icons - Appear after button with nice gap ===== */
@@ -98,23 +95,23 @@
 .social-icon {
   width: 80px;
   height: 80px;
-  background: rgba(0, 207, 255, 0.15);
-  border: 8px solid #00cfff;
+  background: rgba(253, 255, 255, 0.15);
+  border: 8px solid #b3dfdf;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00cfff;
+  color: #b9cbd4;
   font-size: 38px;
   transition: all 0.4s ease;
   box-shadow: 0 10px 40px rgba(135, 230, 252, 0.3);
 }
 
 .social-icon:hover {
-  background: #00cfff;
-  color: #111827;
+  background: #b8dfdf;
+  color: #bfcbd6;
   transform: translateY(-12px);
-  box-shadow: 0 25px 60px rgba(0, 207, 255, 0.6);
+  box-shadow: 0 25px 60px rgba(246, 248, 248, 0.6);
 }
 
 @keyframes fadeUp {
@@ -126,7 +123,7 @@
 
 footer {
   margin-top: 100px auto 40px;
-  color: #64748b;
+  color: #e3e4e6;
   font-size: 16px;
   opacity: 0;
   animation: fadeUp 0.8s ease-out 3.3s forwards;
