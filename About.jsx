@@ -33,8 +33,8 @@ export default function About() {
             </div>
 
             <div className="team-member">
-              <div className="avatar-circle">SJ</div>
-              <h3>Sarah Johnson</h3>
+              <div className="avatar-circle">DS</div>
+              <h3>Desika Sekar</h3>
               <p>UI/UX Designer</p>
               <div className="progress-bar">
                 <div className="progress" style={{ width: "85%" }}></div>
@@ -43,8 +43,8 @@ export default function About() {
             </div>
 
             <div className="team-member">
-              <div className="avatar-circle">MC</div>
-              <h3>Michael Chen</h3>
+              <div className="avatar-circle">DS</div>
+              <h3>Desika Sekar</h3>
               <p>Frontend Specialist</p>
               <div className="progress-bar">
                 <div className="progress" style={{ width: "80%" }}></div>
@@ -67,20 +67,12 @@ export default function About() {
               </div>
             </div>
 
+          
             <div className="info-box">
-              <h3>Skills</h3>
-              <p>Dynamic development using modern tools for scalable and elegant solutions.</p>
-              <div className="tech-icons">
-                <div className="icon">HTML</div>
-                <div className="icon">CSS</div>
-                <div className="icon">React</div>
-                <div className="icon">Node</div>
-                <div className="icon">Tailwind</div>
-                <div className="icon">JS</div>
-              </div>
+              <h3>Inspired By</h3>
+              <p>Modern UI trends, Tailwind CSS, and React ecosystems.</p>
             </div>
-
-            <div className="info-box">
+             <div className="info-box">
               <h3>Inspired By</h3>
               <p>Modern UI trends, Tailwind CSS, and React ecosystems.</p>
             </div>
