@@ -1,0 +1,19 @@
+/* Full-screen fixed background, behind everything */
+.iridescence-container {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;              /* Behind your portfolio content */
+  pointer-events: none;     /* Allows clicks to pass through to content */
+  overflow: hidden;
+}
+
+.iridescence-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
