@@ -1,4 +1,3 @@
-// src/About.jsx
 import React, { useEffect, useState } from "react";
 import "../styles/About.css";
 
@@ -13,16 +12,15 @@ export default function About() {
     <div className="about-section">
       <div className="about-container">
         <div className={`about-card ${loaded ? "show" : ""}`}>
-
           {/* Header */}
           <div className="about-header">
-            <h1>About Page</h1>
+            <h1>About Me</h1>
             <p>
-              Desika Sekar, Full-stack developer this youre tuleifond poyer tailwind project for falifoy and eaclerly cura a molives thiel Reas, for a React and Tailwind project.
+              Full-stack developer passionate about building beautiful, high-performance web applications with modern technologies like React, Tailwind, and Node.js.
             </p>
           </div>
 
-          {/* Team Members */}
+          {/* Team / Skills Grid */}
           <div className="team-grid">
             <div className="team-member">
               <div className="avatar-circle">DS</div>
@@ -61,7 +59,7 @@ export default function About() {
               <h3>About Me</h3>
               <p>
                 Seasoned Full-stack Developer eager to craft beautiful, high-performance web and mobile applications.
-                Currently mastering modern tools and aiming to break into the IT industry by 2028, with long-term goals in AI and data science.
+                Mastering modern tools with goals in AI and data science by 2028.
               </p>
               <div className="skills-tags">
                 <span>HTML</span><span>CSS</span><span>React</span>
@@ -71,7 +69,7 @@ export default function About() {
 
             <div className="info-box">
               <h3>Skills</h3>
-              <p>Dynamic development using modern tools for creating scalable and elegant solutions.</p>
+              <p>Dynamic development using modern tools for scalable and elegant solutions.</p>
               <div className="tech-icons">
                 <div className="icon">HTML</div>
                 <div className="icon">CSS</div>
@@ -82,12 +80,12 @@ export default function About() {
               </div>
             </div>
 
-            <div className="info-box striel">
-              <h3>Striel By</h3>
-              <p>This is pusfimes and fichimes sums to the one developers bussel aent tailwind yeact.</p>
+            <div className="info-box">
+              <h3>Inspired By</h3>
+              <p>Modern UI trends, Tailwind CSS, and React ecosystems.</p>
             </div>
 
-            <div className="info-box projects">
+            <div className="info-box">
               <h3>Projects Completed</h3>
               <div className="project-tags">
                 <span>HTML</span><span>JavaScript</span><span>React</span><span>Node.js</span>
